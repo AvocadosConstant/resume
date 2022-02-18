@@ -1,0 +1,110 @@
+% LaTeX resume using res.cls
+\documentclass[margin,10pt]{res}
+\usepackage{enumitem}
+\usepackage{sourcesanspro}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{slantsc}
+\usepackage[letterspace=85]{microtype}
+\usepackage[style=iso]{datetime2}
+\usepackage{scalerel}
+\newsectionwidth{0.8in}
+\setlist[itemize]{leftmargin=*}
+\renewcommand{\familydefault}{\sfdefault}
+\name{\begin{minipage}[t]{\textwidth}
+%\includegraphics[height=0.5cm]{dllu.pdf}
+%\hspace{0.5cm}
+\Huge
+Tim Hung
+\vspace{4mm}
+\end{minipage}}
+\address{\begin{minipage}[t]{\textwidth}
+\sc
+\lsstyle
+\href{mailto:timhung1010@gmail.com}{timhung1010@gmail.com}
+\hfill \href{https://github.com/AvocadosConstant}{github.com/AvocadosConstant}
+\hfill +1-646-436-9103
+\hfill New York City
+\end{minipage}}
+\begin{document}
+\begin{resume}
+\section{\sc \lsstyle work}
+    \href{https://www.bloomberg.com/company/careers/working-here/engineering/}{\textbf{\large  \scalerel*{\includegraphics{bbg_icon.png}}{B} Bloomberg L.P.}}\hfill New York, NY\\
+    \textbf{Senior Software Engineer} --- Autocomplete
+    \textit{(C++, Python, Kafka, Redis)}\hfill
+    \textsc{\bfseries\lsstyle 05-2019 -- present}
+    \vspace{0.5em}
+    \begin{itemize}
+        \item Led project to scale up the system for ranking results based on personalized real-time hits.
+        \begin{itemize}
+            \item Architected low latency data pipeline for user hits using Kafka, DB sinks, and multi-level caching.
+            \item Sharded architecture across distributed cluster to concurrently handle 2k+ msg/s.
+            \item Reduced E2E latency to <50ms including investigating and uncovering a bug in \href{https://en.wikipedia.org/wiki/Comdb2/}{Comdb2}.
+            \item Devised a method to rank results by aggregating hits with exponential decay.
+            \item Built telemetry framework to monitor throughput, latency, and system health.
+        \end{itemize}
+        \item Designed configurable self-service system to validate autocomplete data ingestion.
+        \item Improved core autocomplete engine query tokenization algorithms.
+        \item Envisioned and built MVP for tool to visualize/replay past user queries in real-time.
+        \item Worked to improve developer experience and be involved outside of engineering projects .
+        \begin{itemize}
+            \item Modernized legacy codebase to Python 3.10 and C++17.
+            \item Active in on-call rotation, code reviews, client tickets.
+            \item Maintained clear and concise documentation and comprehensive unit and integration tests.
+            \item Heavily involved in recruiting: speaking on panels, D\&I, interviewing, mentoring.
+        \end{itemize}
+    \end{itemize}
+    \textbf{Software Engineer} --- Data Intelligence
+    \textit{(Python)}\hfill
+    \textsc{\bfseries\lsstyle 10-2018 -- 05-2019}
+    \vspace{0.5em}
+    \begin{itemize}
+        \item Integrated new financial data sources by implementing high performance ingestion daemons.
+        \item Automated large scale data migrations.
+        \item Enriched internal machine learning infrastructure tools with improved visualizations.
+    \end{itemize}
+    \textbf{Software Engineering Intern} --- Data, Web, \& Analytics
+    \textit{(JS, C\#, Angular)}\hfill
+    \textsc{\bfseries\lsstyle 06-2017 -- 08-2017}
+    \vspace{0.5em}
+    \begin{itemize}
+        \item Leverage global geolocation data to refine search functionality.
+        \item Render web and mobile responsive map views using Angular.
+    \end{itemize}
+
+    \vspace{4pt}
+    
+    \href{https://careers.microsoft.com/professionals/us/en/c-engineering}{\textbf{\large \scalerel*{\includegraphics{msft_icon.png}}{B}  Microsoft}}\hfill Bellevue, WA\\
+    \textbf{Software Engineer / Product Manager Intern} --- Cortana
+    \textit{(Azure, C\#)}\hfill
+    \textsc{\bfseries\lsstyle 05-2016 -- 08-2016}
+    \vspace{0.5em}
+    \begin{itemize}
+        \item Developed platform to extend Cortana compatibility with over 340 new services.
+    \end{itemize}
+
+\vspace{5pt}
+
+\section{\sc \lsstyle skills}
+    \textbf{Languages:}
+    Python, C++, JavaScript, Java, Bash, SQL\\
+    \textbf{Tools:} Kafka, Redis, Git, Vim, Grafana, Humio, Agile, GNU/Linux, \LaTeX\\
+    US Citizen. Fluent in English and Mandarin.
+\end{resume}
+
+\vspace{5pt}
+
+\section{\sc \lsstyle school}
+    \textbf{Binghamton University, SUNY}, B.S. Computer Science, B.A. Mathematics\hfill
+    \textsc{\bfseries\lsstyle 2013 -- 2018}\\
+    Lyle \& Dorothy Feisel Scholarship, University Scholars, $\Pi ME$ Math Honor Society, Dean's List\\
+    ACM Student Chapter Chair and ACM ICPC Coach, HackBU (Hackathon) Organizer\\
+    Course Assistant for CS140 Object Oriented Programming
+
+\begin{minipage}[t]{\textwidth}
+    \flushright
+    \small
+    \sc \lsstyle
+    \hfill updated \today
+\end{minipage}
+\end{document}
